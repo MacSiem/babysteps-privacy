@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BabySteps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; background-color: #fff; }
+        h1 { color: #b45309; margin-top: 30px; margin-bottom: 12px; font-size: 2.35em; }
+        h1:first-of-type { margin-top: 0; }
+        h2 { color: #92400e; margin-top: 30px; margin-bottom: 14px; font-size: 1.5em; }
+        h3 { color: #92400e; margin-top: 20px; margin-bottom: 10px; font-size: 1.15em; }
+        p { margin-bottom: 14px; text-align: justify; }
+        ul, ol { margin-left: 25px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #b45309; text-decoration: none; border-bottom: 1px solid #b45309; }
+        a:hover { color: #92400e; border-bottom-color: #92400e; }
+        strong { color: #92400e; }
+        code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+        table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #e5e7eb; padding: 8px 12px; vertical-align: top; }
+        th { background: #f9fafb; text-align: left; color: #92400e; }
+        td a { word-break: break-all; }
+        .lang-switcher { text-align: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.95em; line-height: 1.9; }
+        .lang-switcher a { margin: 0 8px; font-weight: 600; border-bottom: none; }
+        .note { color: #555; background: #fffbeb; border: 1px solid #fde68a; padding: 12px 14px; border-radius: 8px; margin: 16px 0; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666; font-size: 0.9em; }
+        footer a { color: #666; border-bottom-color: #ccc; }
+        @media (max-width: 540px) {
+            .container { padding: 28px 16px; }
+            h1 { font-size: 2em; }
+            table { font-size: 0.88em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <a href="#pl">Polski</a>
+        <a href="#en">English</a>
+    </div>
+
+    <section id="pl" lang="pl">
+        <h1>Polityka prywatności - BabySteps</h1>
+        <p><strong>Ostatnia aktualizacja / Last updated: 2026-06-05</strong></p>
+
+        <h2>1. Administrator danych</h2>
+        <p>Dla wersji iOS / App Store oraz ogólnie: administratorem danych jest <strong>Maciej Siemiński</strong>, kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>Dla wersji Google Play (Android): administratorem danych jest <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Warszawa, Polska, kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. Czym jest BabySteps</h2>
+        <p>BabySteps to aplikacja dla rodziców i opiekunów do zapisywania kamieni milowych dziecka, wspomnień, zdjęć, notatek, ustawień rodziny, przypomnień i eksportów. Aplikacja jest skierowana do dorosłych. Nie tworzymy kont dzieci i nie prosimy dziecka o samodzielne podawanie danych.</p>
+
+        <h2>3. Dane przechowywane lokalnie na urządzeniu</h2>
+        <p>Dane wpisane przez rodzica są najpierw przechowywane lokalnie w aplikacji. Obejmuje to w szczególności:</p>
+        <ul>
+            <li>profile dzieci, imiona lub pseudonimy, daty urodzenia, kolory i opcjonalne zdjęcia profilu,</li>
+            <li>kamienie milowe, tytuły, daty, notatki, zdjęcia, reakcje rodzinne i znaczniki czasu,</li>
+            <li>dane przestrzeni rodzinnej, takie jak identyfikatory rodziny i członków, role, nazwy wyświetlane, klucze publiczne i zaproszenia,</li>
+            <li>ustawienia aplikacji, język, motyw, przypomnienia, stan onboardingu, eksporty i lokalny stan Premium.</li>
+        </ul>
+        <p>Główna baza lokalna używa zaszyfrowanego MMKV. Klucz szyfrowania jest przechowywany w systemowym SecureStore / Keychain / Android Keystore, gdy jest dostępny.</p>
+
+        <h2>4. Konto, rodzina, synchronizacja i backup</h2>
+        <p>BabySteps może działać lokalnie. Funkcje konta, rodziny, synchronizacji i backupu są opcjonalne. Gdy rodzic włącza te funkcje, aplikacja może używać Apple Sign-In lub Google Sign-In oraz backendu Cloudflare Worker.</p>
+        <p>Przy logowaniu aplikacja wysyła token tożsamości Apple lub Google do backendu, który zwraca sesję aplikacji. Lokalnie zapisywane mogą być: identyfikator użytkownika, token sesji, data wygaśnięcia, dostawca logowania oraz adres e-mail lub Apple Private Relay, jeżeli dostawca go zwróci.</p>
+        <p>Przy rodzinnej synchronizacji backend może przetwarzać techniczne dane potrzebne do połączenia urządzeń: kod zaproszenia, identyfikatory rodziny i członków, klucze publiczne, znaczniki czasu oraz zaszyfrowane wpisy i zdjęcia. Zdjęcia i dane rodzinne są projektowane jako szyfrowane przed wysłaniem. Backend może przechowywać zaszyfrowane dane, identyfikator pliku, rozmiar i datę aktualizacji, aby umożliwić synchronizację lub przywrócenie backupu.</p>
+        <p>Recovery phrase / fraza odzyskiwania służąca do odszyfrowania backupu pozostaje po stronie użytkownika. Bez niej nie da się odszyfrować backupu.</p>
+
+        <h2>5. Powiadomienia</h2>
+        <p>Aplikacja używa powiadomień lokalnych do przypomnień. Jeśli rodzic udzieli zgody na powiadomienia push i aktywny jest system ogłoszeń, aplikacja może zarejestrować anonimowy identyfikator urządzenia i Expo push token w Cloudflare Worker. W takim przypadku przetwarzane mogą być także: platforma, język, wersja aplikacji, kanał wydania, informacja Premium i daty heartbeat. Dane te służą do wysłania ważnych komunikatów aplikacji, a nie do tworzenia kont dziecka.</p>
+
+        <h2>6. Diagnostyka awarii</h2>
+        <p>Aplikacja ma skonfigurowane Sentry do diagnostyki błędów i awarii. Raport może zawierać techniczne informacje o awarii, urządzeniu, systemie, wersji aplikacji i śladzie stosu. Kod aplikacji zawiera ochronę przed wysyłaniem treści rodzinnych i nie ustawia identyfikatora użytkownika w Sentry.</p>
+
+        <h2>7. Reklamy</h2>
+        <p>BabySteps zawiera Google AdMob i może wyświetlać banery reklamowe w bezpłatnej wersji aplikacji. Żądania reklam są ustawione jako niespersonalizowane, z oceną treści G, z konfiguracją child-directed i under-age-of-consent. Na Androidzie aplikacja deklaruje uprawnienie AD_ID, a na iOS może pokazać systemową zgodę ATT wymaganą przez platformę. Odmowa zgody nie blokuje działania aplikacji.</p>
+
+        <h2>8. Zakupy w aplikacji</h2>
+        <p>Zakupy i subskrypcje są obsługiwane przez Apple App Store lub Google Play. Nie otrzymujemy pełnych danych karty płatniczej. Aplikacja może lokalnie zapisać stan Premium, typ uprawnienia i datę wygaśnięcia. Przy backupie konto może zsynchronizować techniczny stan uprawnienia z backendem, aby sprawdzić dostęp do funkcji.</p>
+
+        <h2>9. Dane dzieci</h2>
+        <p>BabySteps jest aplikacją dla rodziców i opiekunów. Dane dotyczące dziecka są wpisywane przez dorosłego i pozostają lokalnie, chyba że rodzic świadomie użyje funkcji rodziny, synchronizacji, eksportu lub backupu. Nie sprzedajemy danych dzieci, nie tworzymy kont dzieci i nie udostępniamy danych do publicznych profili społecznościowych.</p>
+
+        <h2>10. Udostępnianie danych podmiotom trzecim</h2>
+        <p>Dane mogą być przetwarzane przez dostawców usług potrzebnych do działania funkcji aplikacji: Apple i Google dla logowania, zakupów i sklepów, Google AdMob dla reklam, Sentry dla diagnostyki awarii, Expo dla tokenów push oraz Cloudflare Workers / storage dla opcjonalnej synchronizacji, ogłoszeń i backupu. Dostawcy ci działają zgodnie z własnymi zasadami i tylko w zakresie wymaganym dla danej funkcji.</p>
+
+        <h2>11. Usuwanie danych i prawa użytkownika</h2>
+        <p>Użytkownik może usunąć dane lokalne przez funkcje aplikacji albo odinstalowanie aplikacji. Wylogowanie usuwa lokalną sesję konta. Jeśli konto lub backup zostały utworzone na backendzie, można poprosić o usunięcie danych, pisząc na <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Możesz także poprosić o dostęp, sprostowanie, ograniczenie przetwarzania lub usunięcie danych, gdy ma to zastosowanie.</p>
+
+        <h2>12. Kontakt</h2>
+        <p>W sprawach prywatności i wsparcia: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <section id="en" lang="en">
+        <h1>Privacy Policy - BabySteps</h1>
+        <p><strong>Last updated: 2026-06-05</strong></p>
+
+        <h2>1. Data controller</h2>
+        <p>For the iOS / App Store version and generally: the data controller is <strong>Maciej Siemiński</strong>, contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+        <p>For the Google Play (Android) version: the data controller is <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Warszawa, Polska, contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+        <h2>2. What BabySteps does</h2>
+        <p>BabySteps is an app for parents and guardians to record a child's milestones, family memories, photos, notes, reminders, settings and exports. The app is intended for adults. We do not create child accounts and we do not ask a child to provide data directly.</p>
+
+        <h2>3. Data stored locally on the device</h2>
+        <p>Data entered by a parent is stored locally first. This includes:</p>
+        <ul>
+            <li>child profiles, names or nicknames, dates of birth, colors and optional profile photos,</li>
+            <li>milestones, titles, dates, notes, photos, family reactions and timestamps,</li>
+            <li>family workspace data such as family and member identifiers, roles, display names, public keys and invite codes,</li>
+            <li>app settings, language, theme, reminders, onboarding state, exports and local Premium state.</li>
+        </ul>
+        <p>The main local database uses encrypted MMKV. The encryption key is stored in the system SecureStore / Keychain / Android Keystore when available.</p>
+
+        <h2>4. Account, family sync and backup</h2>
+        <p>BabySteps can be used locally. Account, family sync and backup features are optional. When a parent enables those features, the app may use Apple Sign-In or Google Sign-In and a Cloudflare Worker backend.</p>
+        <p>During sign-in, the app sends an Apple or Google identity token to the backend, which returns an app session. The app may store a user ID, session token, expiry date, sign-in provider and email address or Apple Private Relay address if the provider returns one.</p>
+        <p>For family sync, the backend may process technical data needed to connect devices: invite code, family and member identifiers, public keys, timestamps, and encrypted entries and photos. Photos and family data are designed to be encrypted before upload. The backend may store encrypted data, blob identifiers, file size and update date to support sync or backup restore.</p>
+        <p>The recovery phrase used to decrypt a backup remains under the user's control. Without it, the backup cannot be decrypted.</p>
+
+        <h2>5. Notifications</h2>
+        <p>The app uses local notifications for reminders. If a parent grants push notification permission and the announcement system is active, the app may register an anonymous device identifier and Expo push token with a Cloudflare Worker. In that case, platform, language, app version, release track, Premium flag and heartbeat dates may also be processed. This is used for important app announcements, not for creating child accounts.</p>
+
+        <h2>6. Crash diagnostics</h2>
+        <p>The app has Sentry configured for crash and error diagnostics. A report may include technical information about a crash, device, operating system, app version and stack trace. The app code includes safeguards against sending family content and does not set a user identifier in Sentry.</p>
+
+        <h2>7. Ads</h2>
+        <p>BabySteps includes Google AdMob and may show banner ads in the free version. Ad requests are configured as non-personalized, with G-rated content, child-directed treatment and under-age-of-consent treatment. On Android the app declares the AD_ID permission, and on iOS it may show the system ATT permission prompt required by the platform. Refusing permission does not block the app.</p>
+
+        <h2>8. In-app purchases</h2>
+        <p>Purchases and subscriptions are handled by Apple App Store or Google Play. We do not receive full payment card details. The app may store local Premium state, entitlement type and expiry date. For backup, the account may sync technical entitlement status with the backend to check feature access.</p>
+
+        <h2>9. Children's data</h2>
+        <p>BabySteps is a parent-facing app. Child-related data is entered by an adult and stays on the device unless the parent deliberately uses family sync, export or backup. We do not sell children's data, create child accounts or publish child data to public social profiles.</p>
+
+        <h2>10. Third-party processing</h2>
+        <p>Data may be processed by service providers needed for app features: Apple and Google for sign-in, purchases and stores, Google AdMob for ads, Sentry for crash diagnostics, Expo for push tokens, and Cloudflare Workers / storage for optional sync, announcements and backup. These providers operate under their own terms and only within the scope needed for the relevant feature.</p>
+
+        <h2>11. Deletion and user rights</h2>
+        <p>You can delete local data through app features or by uninstalling the app. Signing out removes the local account session. If an account or backup was created on the backend, you can request deletion by writing to <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. You may also request access, correction, restriction or deletion of your data where applicable.</p>
+
+        <h2>12. Contact</h2>
+        <p>Privacy and support contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+    </section>
+
+    <footer>
+        <p>
+            <a href="https://macsiem.dev/">MacSiem.dev</a><br>
+            Canonical: <a href="https://macsiem.github.io/babysteps-privacy/">https://macsiem.github.io/babysteps-privacy/</a><br>
+            Source: <a href="https://github.com/MacSiem/babysteps-privacy">https://github.com/MacSiem/babysteps-privacy</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>

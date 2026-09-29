@@ -70,7 +70,7 @@
         <p>Recovery phrase / fraza odzyskiwania służąca do odszyfrowania backupu pozostaje po stronie użytkownika. Bez niej nie da się odszyfrować backupu.</p>
 
         <h2>5. Powiadomienia</h2>
-        <p>Aplikacja używa powiadomień lokalnych do przypomnień. Jeśli rodzic udzieli zgody na powiadomienia push i aktywny jest system ogłoszeń, aplikacja może zarejestrować anonimowy identyfikator urządzenia i Expo push token w Cloudflare Worker. W takim przypadku przetwarzane mogą być także: platforma, język, wersja aplikacji, kanał wydania, informacja Premium i daty heartbeat. Dane te służą do wysłania ważnych komunikatów aplikacji, a nie do tworzenia kont dziecka.</p>
+        <p>Aplikacja używa powiadomień lokalnych do przypomnień. Jeśli rodzic udzieli zgody na powiadomienia push i aktywny jest system ogłoszeń, aplikacja może zarejestrować pseudonimowy identyfikator instalacji i Expo push token w Cloudflare Worker. W takim przypadku przetwarzane mogą być także: platforma, język, wersja aplikacji, kanał wydania, informacja Premium i daty heartbeat. Dane te służą do wysłania ważnych komunikatów aplikacji, a nie do tworzenia kont dziecka.</p>
 
         <h2>6. Diagnostyka awarii</h2>
         <p>Aplikacja ma skonfigurowane Sentry do diagnostyki błędów i awarii. Raport może zawierać techniczne informacje o awarii, urządzeniu, systemie, wersji aplikacji i śladzie stosu. Kod aplikacji zawiera ochronę przed wysyłaniem treści rodzinnych i nie ustawia identyfikatora użytkownika w Sentry.</p>
@@ -136,7 +136,7 @@
         <p>The recovery phrase used to decrypt a backup remains under the user's control. Without it, the backup cannot be decrypted.</p>
 
         <h2>5. Notifications</h2>
-        <p>The app uses local notifications for reminders. If a parent grants push notification permission and the announcement system is active, the app may register an anonymous device identifier and Expo push token with a Cloudflare Worker. In that case, platform, language, app version, release track, Premium flag and heartbeat dates may also be processed. This is used for important app announcements, not for creating child accounts.</p>
+        <p>The app uses local notifications for reminders. If a parent grants push notification permission and the announcement system is active, the app may register a pseudonymous installation identifier and Expo push token with a Cloudflare Worker. In that case, platform, language, app version, release track, Premium flag and heartbeat dates may also be processed. This is used for important app announcements, not for creating child accounts.</p>
 
         <h2>6. Crash diagnostics</h2>
         <p>The app has Sentry configured for crash and error diagnostics. A report may include technical information about a crash, device, operating system, app version and stack trace. The app code includes safeguards against sending family content and does not set a user identifier in Sentry.</p>

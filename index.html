@@ -44,7 +44,7 @@
 
     <section id="pl" lang="pl">
         <h1>Polityka prywatności - BabySteps</h1>
-        <p><strong>Ostatnia aktualizacja / Last updated: 2026-08-12</strong></p>
+        <p><strong>Ostatnia aktualizacja / Last updated: 2026-10-04</strong></p>
 
         <h2>1. Administrator danych</h2>
         <p>Dla wersji iOS / App Store oraz ogólnie: administratorem danych jest <strong>Maciej Siemiński</strong>, kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
@@ -56,7 +56,7 @@
         <h2>3. Dane przechowywane lokalnie na urządzeniu</h2>
         <p>Dane wpisane przez rodzica są najpierw przechowywane lokalnie w aplikacji. Obejmuje to w szczególności:</p>
         <ul>
-            <li>profile dzieci, imiona lub pseudonimy, daty urodzenia, kolory i opcjonalne zdjęcia profilu,</li>
+            <li>profile dzieci, imiona lub pseudonimy, daty urodzenia, opcjonalny przewidywany termin porodu i ustawienie wieku skorygowanego, kolory i opcjonalne zdjęcia profilu,</li>
             <li>kamienie milowe, tytuły, daty, notatki, zdjęcia, reakcje rodzinne i znaczniki czasu,</li>
             <li>dane przestrzeni rodzinnej, takie jak identyfikatory rodziny i członków, role, nazwy wyświetlane, klucze publiczne i zaproszenia,</li>
             <li>ustawienia aplikacji, język, motyw, przypomnienia, stan onboardingu, eksporty i lokalny stan Premium.</li>
@@ -67,7 +67,9 @@
         <p>BabySteps może działać lokalnie. Funkcje konta, rodziny, synchronizacji i backupu są opcjonalne. Gdy rodzic włącza te funkcje, aplikacja może używać Apple Sign-In lub Google Sign-In oraz backendu Cloudflare Worker.</p>
         <p>Przy logowaniu aplikacja wysyła token tożsamości Apple lub Google do backendu, który zwraca sesję aplikacji. Lokalnie zapisywane mogą być: identyfikator użytkownika, token sesji, data wygaśnięcia, dostawca logowania oraz adres e-mail lub Apple Private Relay, jeżeli dostawca go zwróci.</p>
         <p>Przy rodzinnej synchronizacji backend może przetwarzać techniczne dane potrzebne do połączenia urządzeń: kod zaproszenia, identyfikatory rodziny i członków, klucze publiczne, znaczniki czasu oraz zaszyfrowane wpisy i zdjęcia. Zdjęcia i dane rodzinne są projektowane jako szyfrowane przed wysłaniem. Backend może przechowywać zaszyfrowane dane, identyfikator pliku, rozmiar i datę aktualizacji, aby umożliwić synchronizację lub przywrócenie backupu.</p>
-        <p>Recovery phrase / fraza odzyskiwania służąca do odszyfrowania backupu pozostaje po stronie użytkownika. Bez niej nie da się odszyfrować backupu.</p>
+        <p>Opcjonalna kopia w Google Drive jest zapisywana w prywatnym folderze danych aplikacji (<code>appDataFolder</code>) na koncie Google rodzica. Może obejmować profile dzieci, wpisy, zdjęcia i ich oryginały, ustawienia oraz dane potrzebne do odtworzenia konta i rodziny.
+        </p><p>Klucz szyfrowania tej kopii jest przechowywany razem z kopią w tym samym folderze Drive. Nie wymaga ona zapamiętania dodatkowej frazy ani PIN-u. Google jako dostawca chmury jest technicznie w stanie odczytać treść tej kopii. Nasz backend nie przechowuje tej kopii Google Drive.
+        </p><p>Oddzielną funkcją jest eksport do pliku zaszyfrowanego frazą odzyskiwania. Do odtworzenia takiego pliku potrzebna jest jego fraza; przechowuj plik i frazę w bezpiecznym miejscu.</p>
 
         <h2>5. Powiadomienia</h2>
         <p>Aplikacja używa powiadomień lokalnych do przypomnień. Jeśli rodzic udzieli zgody na powiadomienia push i aktywny jest system ogłoszeń, aplikacja może zarejestrować pseudonimowy identyfikator instalacji i Expo push token w Cloudflare Worker. W takim przypadku przetwarzane mogą być także: platforma, język, wersja aplikacji, kanał wydania, informacja Premium i daty heartbeat. Dane te służą do wysłania ważnych komunikatów aplikacji, a nie do tworzenia kont dziecka.</p>
@@ -87,7 +89,7 @@
         <p>BabySteps jest aplikacją dla rodziców i opiekunów. Dane dotyczące dziecka są wpisywane przez dorosłego i pozostają lokalnie, chyba że rodzic świadomie użyje funkcji rodziny, synchronizacji, eksportu lub backupu. Nie sprzedajemy danych dzieci, nie tworzymy kont dzieci i nie udostępniamy danych do publicznych profili społecznościowych.</p>
 
         <h2>10. Udostępnianie danych podmiotom trzecim</h2>
-        <p>Dane mogą być przetwarzane przez dostawców usług potrzebnych do działania funkcji aplikacji: Apple i Google dla logowania, zakupów i sklepów, Unity Ads dla reklam, Sentry dla diagnostyki awarii, Expo dla tokenów push oraz Cloudflare Workers / storage dla opcjonalnej synchronizacji, ogłoszeń i backupu. Dostawcy ci działają zgodnie z własnymi zasadami i tylko w zakresie wymaganym dla danej funkcji.</p>
+        <p>Dane mogą być przetwarzane przez dostawców usług potrzebnych do działania funkcji aplikacji: Apple i Google dla logowania, zakupów i sklepów, Google Drive dla opcjonalnej kopii, Unity Ads dla reklam, Sentry dla diagnostyki awarii, Expo dla tokenów push oraz Cloudflare Workers / storage dla opcjonalnej synchronizacji, ogłoszeń i backupu. Dostawcy ci działają zgodnie z własnymi zasadami i tylko w zakresie wymaganym dla danej funkcji.</p>
 
         <h2>11. Podstawy prawne przetwarzania (RODO)</h2>
         <p>Tam, gdzie zastosowanie ma RODO, dane przetwarzamy na podstawie:</p>
@@ -98,6 +100,7 @@
         </ul>
 
         <h2>12. Okresy przechowywania</h2>
+        <p>Kopie w Google Drive można usunąć przez funkcję usunięcia kopii w aplikacji lub narzędzia Google. Samo odinstalowanie aplikacji nie stanowi potwierdzenia usunięcia kopii w Drive.</p>
         <p>Dane lokalne pozostają na urządzeniu do czasu ich usunięcia w aplikacji lub odinstalowania aplikacji. Dane konta i zaszyfrowanego backupu na backendzie są przechowywane do czasu usunięcia konta lub żądania usunięcia. Raporty awarii Sentry są przechowywane przez 90 dni (domyślny okres Sentry). Dane żądań reklamowych przetwarza Unity Ads zgodnie z własnymi politykami retencji.</p>
 
         <h2>13. Przekazywanie danych poza EOG</h2>
@@ -112,7 +115,7 @@
 
     <section id="en" lang="en">
         <h1>Privacy Policy - BabySteps</h1>
-        <p><strong>Last updated: 2026-08-12</strong></p>
+        <p><strong>Last updated: 2026-10-04</strong></p>
 
         <h2>1. Data controller</h2>
         <p>For the iOS / App Store version and generally: the data controller is <strong>Maciej Siemiński</strong>, contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
@@ -124,7 +127,7 @@
         <h2>3. Data stored locally on the device</h2>
         <p>Data entered by a parent is stored locally first. This includes:</p>
         <ul>
-            <li>child profiles, names or nicknames, dates of birth, colors and optional profile photos,</li>
+            <li>child profiles, names or nicknames, dates of birth, an optional due date and corrected-age setting, colors and optional profile photos,</li>
             <li>milestones, titles, dates, notes, photos, family reactions and timestamps,</li>
             <li>family workspace data such as family and member identifiers, roles, display names, public keys and invite codes,</li>
             <li>app settings, language, theme, reminders, onboarding state, exports and local Premium state.</li>
@@ -135,7 +138,9 @@
         <p>BabySteps can be used locally. Account, family sync and backup features are optional. When a parent enables those features, the app may use Apple Sign-In or Google Sign-In and a Cloudflare Worker backend.</p>
         <p>During sign-in, the app sends an Apple or Google identity token to the backend, which returns an app session. The app may store a user ID, session token, expiry date, sign-in provider and email address or Apple Private Relay address if the provider returns one.</p>
         <p>For family sync, the backend may process technical data needed to connect devices: invite code, family and member identifiers, public keys, timestamps, and encrypted entries and photos. Photos and family data are designed to be encrypted before upload. The backend may store encrypted data, blob identifiers, file size and update date to support sync or backup restore.</p>
-        <p>The recovery phrase used to decrypt a backup remains under the user's control. Without it, the backup cannot be decrypted.</p>
+        <p>An optional Google Drive backup is stored in the private application data folder (<code>appDataFolder</code>) of the parent’s Google account. It may contain child profiles, entries, photos and their originals, settings, and data required to restore the account and family.
+        </p><p>The encryption key for this backup is stored alongside the backup in the same Drive folder. It does not require remembering an additional phrase or PIN. Google, as the cloud provider, is technically able to access the content of this backup. Our backend does not store this Google Drive backup.
+        </p><p>A separate feature exports a file encrypted with a recovery phrase. Restoring that file requires its phrase; keep both the file and phrase in a safe place.</p>
 
         <h2>5. Notifications</h2>
         <p>The app uses local notifications for reminders. If a parent grants push notification permission and the announcement system is active, the app may register a pseudonymous installation identifier and Expo push token with a Cloudflare Worker. In that case, platform, language, app version, release track, Premium flag and heartbeat dates may also be processed. This is used for important app announcements, not for creating child accounts.</p>
@@ -155,7 +160,7 @@
         <p>BabySteps is a parent-facing app. Child-related data is entered by an adult and stays on the device unless the parent deliberately uses family sync, export or backup. We do not sell children's data, create child accounts or publish child data to public social profiles.</p>
 
         <h2>10. Third-party processing</h2>
-        <p>Data may be processed by service providers needed for app features: Apple and Google for sign-in, purchases and stores, Unity Ads for ads, Sentry for crash diagnostics, Expo for push tokens, and Cloudflare Workers / storage for optional sync, announcements and backup. These providers operate under their own terms and only within the scope needed for the relevant feature.</p>
+        <p>Data may be processed by service providers needed for app features: Apple and Google for sign-in, purchases and stores, Google Drive for optional backup, Unity Ads for ads, Sentry for crash diagnostics, Expo for push tokens, and Cloudflare Workers / storage for optional sync, announcements and backup. These providers operate under their own terms and only within the scope needed for the relevant feature.</p>
 
         <h2>11. Legal bases (GDPR)</h2>
         <p>Where the GDPR applies, we process data on the following legal bases:</p>
@@ -166,6 +171,7 @@
         </ul>
 
         <h2>12. Data retention</h2>
+        <p>Google Drive backups can be deleted using the app’s backup-deletion feature or Google’s tools. Uninstalling the app alone does not confirm deletion of the Drive backup.</p>
         <p>Local data stays on the device until deleted in the app or the app is uninstalled. Account and encrypted backup data on the backend is kept until the account is deleted or deletion is requested. Sentry crash reports are retained for 90 days (Sentry default). Ad request data is processed by Unity Ads under its own retention policies.</p>
 
         <h2>13. International transfers</h2>

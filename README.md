@@ -2,6 +2,10 @@
 
 Static source for the BabySteps privacy-policy page. `index.html` contains Polish and English sections; `de/`, `en/`, `es/`, `fr/`, `ja/`, `ko/`, `pl/`, `pt/`, `uk/` and `zh/` contain redirect pages pointing to the same canonical policy. Those paths are redirects, not separate translations.
 
+## Terms of service
+
+`terms/index.html` contains the matching Polish and English BabySteps service-terms draft. It supplements store terms; the Apple Standard EULA remains in place. Privacy navigation links to both sections. Other UI locales use an explicit English legal-document fallback through the existing canonical policy page; they are not presented as translated terms. The visible draft marker must be replaced with the approved effective version during the guarded publication. No custom EULA has been entered in App Store Connect.
+
 ## Stack and local preview
 
 Plain HTML and inline CSS. No package manifest, dependency installation, npm scripts, generated site or build step is present in this repository.

@@ -26,7 +26,7 @@ GitHub Pages settings read on 2026-10-03 identify a legacy Pages build from the 
 
 ## Configuration and history
 
-The static site has no evidenced environment variables or secrets. `.env.example` therefore records that no entries are required; never put credentials into policy HTML. `CHANGELOG.md` tracks unreleased documentation changes and future policy releases. The HTML currently displays `2026-08-12`; that is a content date, not verified publication history.
+The static site has no evidenced environment variables or secrets. `.env.example` therefore records that no entries are required; never put credentials into policy HTML. `CHANGELOG.md` tracks unreleased documentation changes and future policy releases. The policy HTML currently displays `2026-10-04`; the service terms display a `2026-10-05` draft version. These are content dates, not verified publication history.
 
 ## Links
 

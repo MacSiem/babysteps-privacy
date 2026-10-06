@@ -4,7 +4,7 @@ Static source for the BabySteps privacy-policy page. `index.html` contains Polis
 
 ## Terms of service
 
-`terms/index.html` contains the matching Polish and English BabySteps service-terms draft. It supplements store terms; the Apple Standard EULA remains in place. Privacy navigation links to both sections. Other UI locales use an explicit English legal-document fallback through the existing canonical policy page; they are not presented as translated terms. The effective document version is prepared for 2026-10-06; public availability requires guarded publication of this branch. No custom EULA has been entered in App Store Connect.
+`terms/index.html` contains the matching Polish and English BabySteps service terms. It supplements store terms; the Apple Standard EULA remains in place. Privacy navigation links to both sections. Other UI locales use an explicit English legal-document fallback through the existing canonical policy page; they are not presented as translated terms. The effective document version is prepared for 2026-10-06; public availability requires guarded publication of this branch. No custom EULA has been entered in App Store Connect.
 
 ## Stack and local preview
 

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Complete matching PL/EN Apple CloudKit backup, account binding, cloud key access and separate deletion disclosures; prepare the effective legal-document version for guarded publication.
+
 - Prepare BabySteps service terms in Polish and English, with family/content rights, the actual Drive/key model, phrase-file exports, deletion, store subscriptions, consumer rights and support. Keep the Apple Standard EULA, add privacy-page navigation, and require full review and guarded publication.
 
 - Align the PL/EN privacy draft with the Google Drive backup model: its key is stored beside the backup, Google can access its content, and phrase-encrypted file export is separate. Document optional due date/corrected-age fields and Drive deletion; language entry points target the matching bilingual section. Publication and full privacy acceptance remain gated.

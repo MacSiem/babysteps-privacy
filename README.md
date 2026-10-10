@@ -4,7 +4,7 @@ Static source for the BabySteps privacy-policy page. `index.html` contains Polis
 
 ## Terms of service
 
-`terms/index.html` contains the matching Polish and English BabySteps service terms. It supplements store terms; the Apple Standard EULA remains in place. Privacy navigation links to both sections. Other UI locales use an explicit English legal-document fallback through the existing canonical policy page; they are not presented as translated terms. The effective document version is prepared for 2026-10-06; public availability requires guarded publication of this branch. No custom EULA has been entered in App Store Connect.
+`terms/index.html` contains the matching Polish and English BabySteps service terms. It supplements store terms; the Apple Standard EULA remains in place. Privacy navigation links to both sections. Other UI locales use an explicit English legal-document fallback through the existing canonical policy page; they are not presented as translated terms. The published terms have an effective document version of 2026-10-06. A read-only check on 2026-10-10 confirmed that the canonical terms and policy match the approved source commit `8f4961f`. No custom EULA has been entered in App Store Connect.
 
 ## Stack and local preview
 
@@ -26,7 +26,7 @@ GitHub Pages settings read on 2026-10-03 identify a legacy Pages build from the 
 
 ## Configuration and history
 
-The static site has no evidenced environment variables or secrets. `.env.example` therefore records that no entries are required; never put credentials into policy HTML. `CHANGELOG.md` tracks unreleased documentation changes and future policy releases. The policy HTML currently displays `2026-10-06`; the service terms display a `2026-10-06` version prepared for guarded publication. These are content dates, not verified publication history.
+The static site has no evidenced environment variables or secrets. `.env.example` therefore records that no entries are required; never put credentials into policy HTML. `CHANGELOG.md` tracks unreleased documentation changes and future policy releases. The published policy and service terms both display `2026-10-06`. All twelve public paths (policy, terms and ten locale redirects) returned HTTP 200 and matched source commit `8f4961f` on 2026-10-10. The dates shown in the documents identify their content version; the verification date records the public readback.
 
 ## Links
 

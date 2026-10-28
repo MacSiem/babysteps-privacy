@@ -46,7 +46,7 @@
 
     <section id="pl" lang="pl">
         <h1>Polityka prywatności - BabySteps</h1>
-        <p><strong>Ostatnia aktualizacja / Last updated: 2026-10-27</strong></p>
+        <p><strong>Ostatnia aktualizacja / Last updated: 2026-10-29</strong></p>
 
         <h2>1. Administrator danych</h2>
         <p>Dla wersji iOS / App Store oraz ogólnie: administratorem danych jest <strong>Maciej Siemiński</strong>, kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
@@ -68,6 +68,7 @@
         <h2>4. Konto, rodzina, synchronizacja i backup</h2>
         <p>BabySteps może działać lokalnie. Funkcje konta, rodziny, synchronizacji i backupu są opcjonalne. Gdy rodzic włącza te funkcje, aplikacja może używać Apple Sign-In lub Google Sign-In oraz backendu Cloudflare Worker.</p>
         <p>Przy logowaniu aplikacja wysyła token tożsamości Apple lub Google do backendu, który zwraca sesję aplikacji. Lokalnie zapisywane mogą być: identyfikator użytkownika, token sesji, data wygaśnięcia, dostawca logowania oraz adres e-mail lub Apple Private Relay, jeżeli dostawca go zwróci.</p>
+        <p>Przy logowaniu, łączeniu lub odzyskiwaniu konta Apple aplikacja może również przekazać jednorazowy kod autoryzacji. Nasz backend wymienia go z Apple i przechowuje zaszyfrowane tokeny dostępu i odświeżania oraz powiązane identyfikatory konta, skrót kodu i stan autoryzacji. Dane te służą obsłudze logowania, zapobieganiu ponownemu użyciu kodu i cofnięciu dostępu Apple przy usuwaniu konta. Backend działający na infrastrukturze Cloudflare może odszyfrować te tokeny w tym celu; nie przekazujemy ich dostawcy reklam.</p>
         <p>Przy rodzinnej synchronizacji backend może przetwarzać techniczne dane potrzebne do połączenia urządzeń: kod zaproszenia, identyfikatory rodziny i członków, klucze publiczne, znaczniki czasu oraz zaszyfrowane wpisy i zdjęcia. Zdjęcia i dane rodzinne są projektowane jako szyfrowane przed wysłaniem. Backend może przechowywać zaszyfrowane dane, identyfikator pliku, rozmiar i datę aktualizacji, aby umożliwić synchronizację lub przywrócenie backupu.</p>
         <p>Opcjonalna kopia w Google Drive jest zapisywana w prywatnym folderze danych aplikacji (<code>appDataFolder</code>) na koncie Google rodzica. Może obejmować profile dzieci, wpisy, zdjęcia i ich oryginały, ustawienia oraz dane potrzebne do odtworzenia konta i rodziny.
         </p><p>Klucz szyfrowania tej kopii jest przechowywany razem z kopią w tym samym folderze Drive. Nie wymaga ona zapamiętania dodatkowej frazy ani PIN-u. Google jako dostawca chmury jest technicznie w stanie odczytać treść tej kopii. Nasz backend nie przechowuje tej kopii Google Drive.
@@ -114,11 +115,13 @@
         <h2>12. Okresy przechowywania</h2>
         <p>Kopie w Google Drive pozostają na wybranym koncie do ich usunięcia przez funkcję aplikacji lub narzędzia Google. Kopie Apple pozostają w prywatnej bazie CloudKit konta iCloud do ich odrębnego usunięcia przez funkcję aplikacji lub narzędzia Apple. Samo odinstalowanie aplikacji nie usuwa kopii Drive ani Apple.</p>
         <p>Dane lokalne pozostają na urządzeniu do czasu ich usunięcia w aplikacji lub odinstalowania aplikacji. Dane konta i zaszyfrowanego backupu na backendzie są przechowywane do czasu usunięcia konta lub żądania usunięcia. Raporty błędów i awarii w Sentry są przechowywane przez 30 dni, zgodnie z obecnie używanym planem Developer; po tym okresie zdarzenia wygasają automatycznie. Dane żądań reklamowych przetwarza Unity Ads zgodnie z własnymi politykami retencji.</p>
+        <p>Dane autoryzacji Apple opisane w sekcji 4 są przechowywane do usunięcia konta, również gdy zapisany token został wcześniej unieważniony. Są usuwane wraz z kontem po skutecznym zakończeniu jego usuwania.</p>
 
         <h2>13. Przekazywanie danych poza EOG</h2>
         <p>Dostawcy wymienieni w sekcji 10 (Apple, Google, Unity Ads, Sentry, Expo, Cloudflare) mogą przetwarzać dane techniczne poza Europejskim Obszarem Gospodarczym. Takie transfery opierają się na zabezpieczeniach wymaganych przez RODO, np. standardowych klauzulach umownych Komisji Europejskiej lub decyzji o adekwatności (w tym EU–US Data Privacy Framework, gdy ma zastosowanie). Treści rodzinne przeznaczone do synchronizacji lub backupu są projektowane jako zaszyfrowane przed wysłaniem.</p>
 
         <h2>14. Usuwanie danych i prawa użytkownika</h2>
+        <p>Konto możesz usunąć za pomocą funkcji usuwania konta w aplikacji. Backend cofa wtedy dostęp Apple na podstawie dostępnych, potwierdzonych tokenów. Jeśli nie ma potwierdzonych danych autoryzacji pozwalających wykonać to automatycznie, po usunięciu konta aplikacja wskazuje sposób ręcznego cofnięcia dostępu w ustawieniach konta Apple. Cofnięcie dostępu Apple jest odrębne od usunięcia danych aplikacji. Błąd operacji nie oznacza zakończenia usuwania; aplikacja wyświetla informację o niepowodzeniu.</p>
         <p>Użytkownik może usunąć dane lokalne przez funkcje aplikacji albo odinstalowanie aplikacji. Wylogowanie usuwa lokalną sesję konta. Jeśli konto lub backup zostały utworzone na backendzie, można poprosić o usunięcie danych, pisząc na <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Masz prawo do dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie. Masz także prawo wniesienia skargi do organu nadzorczego — w Polsce jest to Prezes Urzędu Ochrony Danych Osobowych (UODO), ul. Stanisława Moniuszki 1A, 00-014 Warszawa, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
 
         <h2>15. Kontakt</h2>
@@ -127,7 +130,7 @@
 
     <section id="en" lang="en">
         <h1>Privacy Policy - BabySteps</h1>
-        <p><strong>Last updated: 2026-10-27</strong></p>
+        <p><strong>Last updated: 2026-10-29</strong></p>
 
         <h2>1. Data controller</h2>
         <p>For the iOS / App Store version and generally: the data controller is <strong>Maciej Siemiński</strong>, contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
@@ -149,6 +152,7 @@
         <h2>4. Account, family sync and backup</h2>
         <p>BabySteps can be used locally. Account, family sync and backup features are optional. When a parent enables those features, the app may use Apple Sign-In or Google Sign-In and a Cloudflare Worker backend.</p>
         <p>During sign-in, the app sends an Apple or Google identity token to the backend, which returns an app session. The app may store a user ID, session token, expiry date, sign-in provider and email address or Apple Private Relay address if the provider returns one.</p>
+        <p>When signing in, linking or recovering an Apple account, the app may also send a single-use authorization code. Our backend exchanges it with Apple and stores encrypted access and refresh tokens, related account identifiers, a hash of the code and the authorization status. These data support sign-in, prevent reuse of the code and allow Apple access to be revoked when the account is deleted. The backend, running on Cloudflare infrastructure, can decrypt these tokens for this purpose; we do not send them to the advertising provider.</p>
         <p>For family sync, the backend may process technical data needed to connect devices: invite code, family and member identifiers, public keys, timestamps, and encrypted entries and photos. Photos and family data are designed to be encrypted before upload. The backend may store encrypted data, blob identifiers, file size and update date to support sync or backup restore.</p>
         <p>An optional Google Drive backup is stored in the private application data folder (<code>appDataFolder</code>) of the parent’s Google account. It may contain child profiles, entries, photos and their originals, settings, and data required to restore the account and family.
         </p><p>The encryption key for this backup is stored alongside the backup in the same Drive folder. It does not require remembering an additional phrase or PIN. Google, as the cloud provider, is technically able to access the content of this backup. Our backend does not store this Google Drive backup.
@@ -197,11 +201,13 @@
         <h2>12. Data retention</h2>
         <p>Google Drive backups remain in the selected account until deleted using the app’s backup-deletion feature or Google’s tools. Apple backups remain in the iCloud account’s private CloudKit database until separately deleted using the app’s feature or Apple’s tools. Uninstalling the app alone does not delete Drive or Apple backups.</p>
         <p>Local data stays on the device until deleted in the app or the app is uninstalled. Account and encrypted backup data on the backend is kept until the account is deleted or deletion is requested. Sentry error and crash reports are retained for 30 days under the currently used Developer plan; events expire automatically after that period. Ad request data is processed by Unity Ads under its own retention policies.</p>
+        <p>The Apple authorization data described in section 4 is retained until the account is deleted, including when a stored token has already been revoked. It is removed with the account after account deletion completes successfully.</p>
 
         <h2>13. International transfers</h2>
         <p>The providers listed in section 10 (Apple, Google, Unity Ads, Sentry, Expo, Cloudflare) may process technical data outside the European Economic Area. Such transfers rely on safeguards required by the GDPR, such as the European Commission's Standard Contractual Clauses or an adequacy decision (including the EU–US Data Privacy Framework where applicable). Family content intended for sync or backup is designed to be encrypted before upload.</p>
 
         <h2>14. Deletion and user rights</h2>
+        <p>You can delete your account using the account-deletion feature in the app. The backend then revokes Apple access using available, confirmed tokens. If no confirmed authorization data is available for automatic revocation, the app explains how to revoke access manually in your Apple Account settings after the app account has been deleted. Revoking Apple access is separate from deleting app data. An operation error does not mean deletion has completed; the app displays a failure message.</p>
         <p>You can delete local data through app features or by uninstalling the app. Signing out removes the local account session. If an account or backup was created on the backend, you can request deletion by writing to <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. You have the right to access, rectify, erase, restrict, or object to processing based on legitimate interest, and the right to data portability. You also have the right to lodge a complaint with a supervisory authority — in Poland, the President of the Personal Data Protection Office (UODO), ul. Stanisława Moniuszki 1A, 00-014 Warszawa, <a href="https://uodo.gov.pl/">uodo.gov.pl</a>.</p>
 
         <h2>15. Contact</h2>

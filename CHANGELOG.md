@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Clarify public-release legacy Cloudflare backup and manual Apple disconnection; distinguish optional Drive/CloudKit test features. Remove descriptions of Apple token storage and automatic revocation that are not deployed for this release.
+
 - Complete matching PL/EN Apple CloudKit backup, account binding, cloud key access and separate deletion disclosures; prepare the effective legal-document version for guarded publication.
 
 - Prepare BabySteps service terms in Polish and English, with family/content rights, the actual Drive/key model, phrase-file exports, deletion, store subscriptions, consumer rights and support. Keep the Apple Standard EULA, add privacy-page navigation, and require full review and guarded publication.

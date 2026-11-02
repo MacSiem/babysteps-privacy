@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Clarify public-release legacy Cloudflare backup and manual Apple disconnection; distinguish optional Drive/CloudKit test features. Remove descriptions of Apple token storage and automatic revocation that are not deployed for this release.
+- Prepare the 2026-11-02 PL/EN full-release draft: optional Drive/CloudKit/file backups, encrypted Apple authorization and revocation, family entitlement links, photo retention and metadata retained after account deletion. Publication and final app/backend qualification remain open.
 
 - Complete matching PL/EN Apple CloudKit backup, account binding, cloud key access and separate deletion disclosures; prepare the effective legal-document version for guarded publication.
 

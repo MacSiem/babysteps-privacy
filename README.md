@@ -20,6 +20,8 @@ Open `http://127.0.0.1:8000/` to inspect the policy and its `#pl` and `#en` sect
 
 ## Updating and publishing
 
+The working draft dated 2026-11-02 describes the planned full release: optional cloud/file backups, Apple authorization and revocation, family entitlement links, and photo and metadata retention. It has not been published; final app/backend qualification and release authorization remain required.
+
 Edit the Polish and English policy sections together, including the visible last-updated date when the policy content changes. Keep redirect targets and canonical links consistent. Check the root page, language anchors and all ten redirect pages before publishing.
 
 GitHub Pages settings read on 2026-10-03 identify a legacy Pages build from the root (`/`) of `main`, with HTTPS enforced. There is no tracked deployment workflow or deploy script. A push or merge to the publishing branch can change the public policy; it requires the owner's release authorization and publish guard. Recheck Pages settings before publishing. After publication, read back the canonical policy and redirects; a commit or dispatch does not establish that the public page changed.

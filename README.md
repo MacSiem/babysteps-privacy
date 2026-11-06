@@ -20,7 +20,7 @@ Open `http://127.0.0.1:8000/` to inspect the policy and its `#pl` and `#en` sect
 
 ## Updating and publishing
 
-The working draft dated 2026-11-02 describes the planned full release: optional cloud/file backups, Apple authorization and revocation, family entitlement links, and photo and metadata retention. It has not been published; final app/backend qualification and release authorization remain required.
+This repository contains the Polish and English BabySteps privacy policy, language redirects, and terms. The policy describes optional cloud/file backups, Apple authorization and revocation, family features, and data retention.
 
 Edit the Polish and English policy sections together, including the visible last-updated date when the policy content changes. Keep redirect targets and canonical links consistent. Check the root page, language anchors and all ten redirect pages before publishing.
 

@@ -2,6 +2,10 @@
 
 Static source for the BabySteps privacy-policy page. `index.html` contains Polish and English sections; `de/`, `en/`, `es/`, `fr/`, `ja/`, `ko/`, `pl/`, `pt/`, `uk/` and `zh/` contain redirect pages pointing to the same canonical policy. Those paths are redirects, not separate translations.
 
+## Data-deletion page (2.1.0 draft)
+
+`delete-data/index.html` is a small bilingual (PL/EN) page with the same instructions as policy section 14, intended as the Play Console data-deletion URL (`https://macsiem.github.io/babysteps-privacy/delete-data/` once published). Include it in the post-publication readback with the root page, terms and the ten redirects. Draft pages carry the date placeholder `[DATA PUBLIKACJI]`; replace it before publishing.
+
 ## Terms of service
 
 `terms/index.html` contains the matching Polish and English BabySteps service terms. It supplements store terms; the Apple Standard EULA remains in place. Privacy navigation links to both sections. Other UI locales use an explicit English legal-document fallback through the existing canonical policy page; they are not presented as translated terms. The published terms have an effective document version of 2026-10-06. A read-only check on 2026-10-10 confirmed that the canonical terms and policy match the approved source commit `8f4961f`. No custom EULA has been entered in App Store Connect.

@@ -2,9 +2,9 @@
 
 Static source for the BabySteps privacy-policy page. `index.html` contains Polish and English sections; `de/`, `en/`, `es/`, `fr/`, `ja/`, `ko/`, `pl/`, `pt/`, `uk/` and `zh/` contain redirect pages pointing to the same canonical policy. Those paths are redirects, not separate translations.
 
-## Data-deletion page (2.1.0 draft)
+## Data-deletion page
 
-`delete-data/index.html` is a small bilingual (PL/EN) page with the same instructions as policy section 14, intended as the Play Console data-deletion URL (`https://macsiem.github.io/babysteps-privacy/delete-data/` once published). Include it in the post-publication readback with the root page, terms and the ten redirects. Draft pages carry the date placeholder `[DATA PUBLIKACJI]`; replace it before publishing.
+`delete-data/index.html` is a small bilingual (PL/EN) page with the data-deletion instructions that accompany policy section 14, used as the Play Console data-deletion URL (`https://macsiem.github.io/babysteps-privacy/delete-data/`). Its item names and effects follow the app screen "Delete my data" (`src/screens/DeleteDataScreen.tsx` and the `deleteData` locale strings); keep them in step with the app. Include it in the post-publication readback with the root page, terms and the ten redirects.
 
 ## Terms of service
 
@@ -32,7 +32,7 @@ GitHub Pages settings read on 2026-10-03 identify a legacy Pages build from the 
 
 ## Configuration and history
 
-The static site has no evidenced environment variables or secrets. `.env.example` therefore records that no entries are required; never put credentials into policy HTML. `CHANGELOG.md` tracks unreleased documentation changes and future policy releases. The published policy displays `2026-10-29`; the service terms retain `2026-10-06`. The policy publication on 2026-10-29 was read back successfully and matched approved source `5cccf4a`. All twelve public paths (policy, terms and ten locale redirects) returned HTTP 200 and matched source commit `8f4961f` on 2026-10-10. The dates shown in the documents identify their content version; the verification date records the public readback.
+The static site has no evidenced environment variables or secrets. `.env.example` therefore records that no entries are required; never put credentials into policy HTML. `CHANGELOG.md` tracks unreleased documentation changes and future policy releases. The current document version is 14 November 2026 (BabySteps 2.1.0) for the policy, the terms and the data-deletion page; all thirteen public paths (policy, terms, data-deletion page and ten locale redirects) belong in its readback. Earlier versions: the policy displayed `2026-10-29` and the service terms `2026-10-06`. The policy publication on 2026-10-29 was read back successfully and matched approved source `5cccf4a`. All twelve public paths (policy, terms and ten locale redirects) returned HTTP 200 and matched source commit `8f4961f` on 2026-10-10. The dates shown in the documents identify their content version; the verification date records the public readback.
 
 ## Links
 

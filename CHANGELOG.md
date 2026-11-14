@@ -1,10 +1,15 @@
 # Changelog
 
-## Unreleased
+## 2026-11-14 — BabySteps 2.1.0
 
-- Prepare the 2026-11-09 PL/EN BabySteps 2.1.0 draft (DRAFT, not published; owner publishes after review): state that sign-in is optional and never required; list the sign-in data held on the server (internal profile ID, Apple/Google provider ID, e-mail or Private Relay address, dates); describe Sign in with Apple on Android through the browser (token and one-time ticket held at most 5 minutes); add a data-deletion section (`#usuwanie-danych` / `#data-deletion`) covering in-app "Delete my data" without sign-in, e-mail requests for users without the app, and deleting iCloud/Drive copies; align the terms (section 7) with "Delete my data". Matching store declarations are drafted in the app sprint file `release/PRIVACY-FORMS-210.md`.
+Document version 14 November 2026 for the privacy policy (PL/EN), the terms and the new data-deletion page `delete-data/`. Publication is the owner's authorized push to `main`; record the public readback separately.
 
-- Finalize the 2.1.0 draft against the 2026-11-10 facts (DRAFT, not published): Apple access is now revoked automatically on deletion for both iPhone and Android browser sign-in (production Apple lifecycle secrets set 2026-11-10; code held at most 5 minutes in the Android ticket, then exchanged with Apple); add a dedicated bilingual data-deletion page `delete-data/` (for the Play Console deletion URL) linked from policy section 14; replace the draft document dates in the policy, terms and deletion page with the placeholder `[DATA PUBLIKACJI]` (owner sets the real publication date).
+- Privacy policy: sign-in (Apple or Google) is optional and never required; sign-in data held on the server (internal profile ID, Apple/Google provider ID, e-mail or Private Relay address, dates); Sign in with Apple on Android through the browser (token, authorization code and one-time ticket held at most 5 minutes); Apple access revocation attempted on deletion for iPhone and Android sign-in; creating a family space requires Premium or an active trial, joining is free; data-deletion section (`#usuwanie-danych` / `#data-deletion`) covering in-app "Delete my data" without sign-in, e-mail requests for users without the app, and deleting iCloud/Drive copies with provider tools.
+- Data-deletion page `delete-data/` (PL/EN, Play Console deletion URL), linked from policy section 14. It lists the four items exactly as on the app screen ("Data on this phone", "All BabySteps backups in iCloud", "All BabySteps backups in Google Drive", "Data on the BabySteps server and family membership"), states that a backup item deletes all BabySteps backups in that provider account including other families' backups, and that backups in another provider account are deleted with the provider's tools.
+- Terms: section 4 (family space requires Premium or trial) and section 7 ("Delete my data"); document version 14 November 2026.
+- Matching store declarations are drafted in the app sprint file `release/PRIVACY-FORMS-210.md`.
+
+## Earlier unreleased notes
 
 - Prepare the 2026-11-02 PL/EN full-release draft: optional Drive/CloudKit/file backups, encrypted Apple authorization and revocation, family entitlement links, photo retention and metadata retained after account deletion. Publication and final app/backend qualification remain open.
 

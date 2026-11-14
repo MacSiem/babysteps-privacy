@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-14 — translations (BabySteps 2.1.0, document version unchanged)
+
+- Full translations of the privacy policy, terms and data-deletion page into de, es, fr, ja, ko, pt (Brazilian), uk and zh (Simplified): `/<lang>/`, `/<lang>/terms/`, `/<lang>/delete-data/` (the former redirect pages `/de/` ... `/zh/` become full policy pages). Document version stays 14 November 2026 (BabySteps 2.1.0).
+- Language switcher and `hreflang` added to the PL/EN pages (no change to PL/EN content); `/pl/`, `/en/`, `#pl`, `#en`, `/terms/#pl|#en`, `/delete-data/` unchanged.
+- Each translation carries a note that it is provided for convenience and the Polish version prevails (the existing documents state no binding version; to be confirmed by the owner).
+
 ## 2026-11-14 — BabySteps 2.1.0
 
 Document version 14 November 2026 for the privacy policy (PL/EN), the terms and the new data-deletion page `delete-data/`. Publication is the owner's authorized push to `main`; record the public readback separately.
